@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id()->unique();
             $table->string('email', 50)->unique();
             $table->bigInteger('mobile_number');
-            $table->string('password', 30);
+            $table->string('password');
+            $table->string('remember_token');
             $table->timestamps();
         });
     }
