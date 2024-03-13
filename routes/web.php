@@ -18,6 +18,8 @@ Route::get('/', [LoginController::class, 'index']);
 
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
 
+Route::post('/register', [LoginController::class, 'register'])->name('register');
+
 Route::get('/catalog', function () {
     return view('welcome');
 });
